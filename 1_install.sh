@@ -291,7 +291,7 @@ alternatives --set javac /usr/lib/jvm/java-21-amazon-corretto/bin/javac
 
 systemctl set-default graphical.target
 systemctl enable greetd
-sed -i 's/"agreety --cmd \/bin\/sh"/"/usr/bin/dms-greeter --command niri"/g' '/etc/greetd/config.toml'
+sed -i 's/"agreety --cmd \/bin\/sh"/"\/usr\/bin\/dms-greeter --command niri"/g' '/etc/greetd/config.toml'
 
 cd /usr/bin || return
 ln -s lldb-dap lldb-vscode
