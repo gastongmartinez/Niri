@@ -122,5 +122,3 @@ if [ ! -d ~/.config/niri ]; then
     mkdir -p ~/.config/niri
 fi
 cp config.kdl ~/.config/niri/
-
-firefox

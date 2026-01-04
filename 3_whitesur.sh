@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "Inicializando Firefox..."
+firefox
+sleep 5
+
 # Iconos WhiteSur Grey
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
 cd WhiteSur-icon-theme || return
