@@ -48,7 +48,7 @@ touch ~/.config/environment.d/90-dms.conf
 echo 'QT_QPA_PLATFORMTHEME=qt6ct' >> ~/.config/environment.d/90-dms.conf
 touch ~/.config/kdeglobals
 echo -e "[KDE]\nwidgetStyle=qt6ct-style\n\n[Icons]\nTheme=WhiteSur-grey-dark" >> ~/.config/kdeglobals
-sed -i '/\[Appearance\]/a\icon_theme=WhiteSur-grey' ~/.config/qt6ct/qt6ct.conf
+echo -e "[Appearance]\ncolor_scheme_path=$HOME/.local/share/color-schemes/WhiteSurDark.colors\ncustom_palette=true\nicon_theme=WhiteSur-grey" > ~/.config/qt6ct/qt6ct.conf
 
 # Greeter
 dms greeter sync
