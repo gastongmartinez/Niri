@@ -22,7 +22,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 if [ ! -d ~/.local/bin ]; then
     mkdir -p ~/.local/bin
 fi
-rustup component add rust-analyzer
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Flatpak
@@ -67,6 +66,8 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 pip install black 'python-lsp-server[all]' pyright yamllint autopep8
 #cargo install taplo-cli --locked
 #cargo install stylua
+rustup component add rust-analyzer
+
 wget https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz
 gunzip taplo-linux-x86_64.gz
 chmod +x taplo-linux-x86_64
