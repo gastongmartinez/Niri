@@ -125,6 +125,7 @@ PAQUETES=(
     'unrar'
     'alacritty'
     'htop'
+    'btop'
     'lshw'
     'lshw-gui'
     'powerline'
