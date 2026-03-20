@@ -65,7 +65,7 @@ curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos
 sh -c 'echo -e "[google-chrome]\nname=google-chrome\nbaseurl=https://dl.google.com/linux/chrome/rpm/stable/x86_64\nenabled=1\ngpgcheck=1\ngpgkey=https://dl.google.com/linux/linux_signing_key.pub" > /etc/yum.repos.d/google-chrome.repo'
 
 # PGAdmin
-rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
+# rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
 
 # CORP
 dnf copr enable atim/lazygit -y
@@ -118,10 +118,9 @@ PAQUETES=(
     #### Sistema ####
     'flatpak'
     'tldr'
-    'helix'
     'lsd'
     'corectrl'
-    'p7zip'
+    '7zip-standalone'
     'unrar'
     'alacritty'
     'htop'
@@ -132,7 +131,6 @@ PAQUETES=(
     'libreoffice'
     'neovim'
     'python3-neovim'
-    'emacs'
     'scribus'
     'flameshot'
     'klavaro'
@@ -152,8 +150,6 @@ PAQUETES=(
     'fastfetch'
 
     #### Multimedia ####
-    'vlc'
-    'python-vlc'
     'mpv'
     'HandBrake'
     'HandBrake-gui'
@@ -227,10 +223,11 @@ PAQUETES=(
     'cockpit-machines'
     'cockpit-podman'
     'cockpit-selinux'
+    'cockpit-files'
 
     ### Virtualizacion ###
     'virt-manager'
-    'ebtables-services'
+    'iptables-services'
     'bridge-utils'
     'libguestfs'
 
@@ -258,7 +255,7 @@ for PAQ in "${PAQUETES[@]}"; do
     dnf install "$PAQ" -y
 done
 
-rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 dnf install https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.rpm -y
 dnf install https://corretto.aws/downloads/latest/amazon-corretto-25-x64-linux-jdk.rpm -y
 ###############################################################################
