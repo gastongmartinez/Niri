@@ -72,11 +72,11 @@ gunzip taplo-linux-x86_64.gz
 chmod +x taplo-linux-x86_64
 mv taplo-linux-x86_64 "$HOME/.local/bin/taplo"
 
-wget https://github.com/JohnnyMorganz/StyLua/releases/download/v2.3.1/stylua-linux-x86_64.zip
+wget https://github.com/JohnnyMorganz/StyLua/releases/download/v2.4.0/stylua-linux-x86_64.zip
 unzip stylua-linux-x86_64.zip -d "$HOME/.local/bin/"
 rm stylua-linux-x86_64.zip
 
-wget https://github.com/artempyanykh/marksman/releases/download/2024-12-18/marksman-linux-x64
+wget https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64
 mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
@@ -91,7 +91,7 @@ rm zellij-x86_64-unknown-linux-musl.tar.gz
 mv zellij "$HOME/.local/bin/"
 
 # Atuin
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- --non-interactive
 
 # LazyVim
 read -rp "Instalar LazyVim? (S/N): " LVIM
