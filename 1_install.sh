@@ -82,6 +82,7 @@ dnf install libavcodec-freeworld -y
 dnf group install multimedia -y
 dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 dnf swap ffmpeg-free ffmpeg --allowerasing -y
+dnf install libva-utils -y
 ################################################################################
 
 ############################### Apps Generales ################################
